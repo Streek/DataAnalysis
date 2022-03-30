@@ -1,38 +1,57 @@
 # Datascience Project (Github Languages)
+
+A link to the write up about this research [here on medium](https://medium.com/@streek/can-github-tell-us-what-programming-language-to-learn-d84d531ebd38).
+
 ## Table of Contents
+
 1. About the Dataset
 2. Rationale
 3. Major Questions
-a. What are the most popular languages now? (At the latest data possible)
-b. What were the most popular languages at the earliest data point.
-c. What languages have grown the fastest?
-d. What languages have stayed high in popularity the longest?
-e. If we had to pick a language to learn which one should we do?
+   a. What are the most popular languages now? (At the latest data possible)
+   b. What were the most popular languages at the earliest data point.
+   c. What languages have grown the fastest?
+   d. What languages have stayed high in popularity the longest?
+   e. If we had to pick a language to learn which one should we do?
 4. The Approach
 5. Technical Challenges
-a. Dataset doesn't have a lot of information beyond counts.
-b. Not granular enough.
+   a. Dataset doesn't have a lot of information beyond counts.
+   b. Not granular enough.
 
 ## About the dataset
-The dataset is a collection of issues, pull requests, and repositories that exist for each language on github as well as what year and quarter the reading was taken in.  The data set is simple but complete.
+
+The dataset is a collection of issues, pull requests, and repositories that exist for each language on github as well as what year and quarter the reading was taken in. The data set is simple but complete.
 
 The data resides in the `./data` folder
+
 ## Rationale
-I decided to use the github public respositories dataset because as a software engineer I always find it interesting what languages are popular, how quickly they raise and lower in popularity, and other metrics.  I'm commonly asked by people getting into engineering what language they should start with.  There's a lot of things that go into figuring out which language is the "right" one.  We can pick the most popular language at the time but who knows if it'll start popular in a few years, will you be able to find a job using that language.
+
+I decided to use the github public respositories dataset because as a software engineer I always find it interesting what languages are popular, how quickly they raise and lower in popularity, and other metrics. I'm commonly asked by people getting into engineering what language they should start with. There's a lot of things that go into figuring out which language is the "right" one. We can pick the most popular language at the time but who knows if it'll start popular in a few years, will you be able to find a job using that language.
+
 ## Major Questions
+
 ### What are the most popular languages now? (At the latest data possible)
-We have data from 2011 to 2022, so at the beginning of 2022 (it's currently Q1 2022) what languages are most popular by count.  Can we gather any other insights from counts related to repos, issues, or pull requests?  Is there a most collaborative language?  Or a language with less errors per repository?
+
+We have data from 2011 to 2022, so at the beginning of 2022 (it's currently Q1 2022) what languages are most popular by count. Can we gather any other insights from counts related to repos, issues, or pull requests? Is there a most collaborative language? Or a language with less errors per repository?
+
 ### What were the most popular languages at the earliest data point?
-As above, in 2011 which languages have the most repositories, issues, or pull requests?  How similar is the list?
+
+As above, in 2011 which languages have the most repositories, issues, or pull requests? How similar is the list?
+
 ### What languages have grown the fastest?
+
 What languages have grown the fastest from 2011 to 2022, is it different if we look at repositories versus if we look at issues or pull requests?
+
 ### What languages have stayed high in popularity the longest?
-If we see a langauge in the top most popular early and late in the data set, have they stayed there the whole time?  Can we assume these are the most popular languages and thus will continue to be popular?
+
+If we see a langauge in the top most popular early and late in the data set, have they stayed there the whole time? Can we assume these are the most popular languages and thus will continue to be popular?
+
 ### If we had to pick a language to learn which one should we do?
+
 Based on this is there a best language to pick for a new programmer based on popularity or use?
 
 ## Approach
-This data set is pretty simple, we have the language name, the year, the quarter, and the count for that quarter in the form of CSV files.  Each CSV file is for another type of data, E.g. repositories, issues, pull requests, etc.
+
+This data set is pretty simple, we have the language name, the year, the quarter, and the count for that quarter in the form of CSV files. Each CSV file is for another type of data, E.g. repositories, issues, pull requests, etc.
 
 To unify the data we are renaming and merging the counts accross files.
 
@@ -42,8 +61,9 @@ I setup the data in jupyter notebook.
 The notebook file is `./Data.ipynb`
 
 ## Technical Challenges
+
 The dataset is pretty simple.
-There was some issues for some reason setting up the pipenv virtualenv but once I re-setup my pipenv it worked flowless.  I believe this was related to M1 mac issues in the version of python I had setup originally.
+There was some issues for some reason setting up the pipenv virtualenv but once I re-setup my pipenv it worked flowless. I believe this was related to M1 mac issues in the version of python I had setup originally.
 
 My Objectives:
 Prepare data:
@@ -51,8 +71,7 @@ Gather necessary data to answer your questions
 Handle categorical and missing data
 Provide insight into the methods you chose and why you chose them
 Analyze, Model, and Visualize
-Provide a clear connection between your business questions and how the data answers them
-4) Communicate your business insights:
+Provide a clear connection between your business questions and how the data answers them 4) Communicate your business insights:
 
 Create a Github repository to share your code and data wrangling/modeling techniques, with a technical audience in mind
 Create a blog post to share your questions and insights with a non-technical audience
